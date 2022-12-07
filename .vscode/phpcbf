@@ -1,0 +1,13 @@
+#!/bin/bash
+LOCAL_PATH=`pwd`
+REMOTE_PATH='/app/'
+
+for param; do
+  if [[ "$param" == *"$LOCAL_PATH"* ]]; then
+    param=${param//$LOCAL_PATH/$REMOTE_PATH}
+  fi
+
+  newparams+=("$param")
+done
+
+/usr/local/bin/docker-compose -f $LOCAL_PATH/docker/docker-compose.yml -p drupal8 exec -T php /app/vendor/bin/phpcbf ${newparams[@]}

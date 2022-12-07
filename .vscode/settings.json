@@ -1,0 +1,14 @@
+{
+  "php.suggest.basic": false,
+  "php.validate.executablePath": "./.vscode/php",
+  "php.debug.executablePath": "./.vscode/php",
+  "php.executablePath": "./.vscode/php",
+  "phpsab.composerJsonPath": "/app/composer.json",
+  "phpsab.debug": true,
+  "phpsab.executablePathCS": "./.vscode/phpcs",
+  "phpsab.executablePathCBF": "./.vscode/phpcbf",
+  "phpsab.fixerArguments": [
+
+  ],
+  "phpsab.standard": "Drupal",
+}
